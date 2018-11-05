@@ -37,28 +37,12 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:background="@drawable/biz_plugin_weather_shenzhen_bg"
+        android:background="@drawable/love"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@+id/city_title">
 
-        <EditText
-            android:id="@+id/search_edit"
-            android:layout_width="fill_parent"
-            android:layout_height="54dp"
-            android:layout_margin="15.0dip"
-            android:background="@drawable/contact_search_box_edittext_keyword_background"
-            android:drawableLeft="@drawable/magnifying_glass"
-            android:drawablePadding="10.0dip"
-            android:hint="搜索全国城市（中文）"
-            android:paddingBottom="14.0dp"
-            android:paddingLeft="15.0dp"
-            android:paddingRight="30.0dp"
-            android:paddingTop="15.0dp"
-            android:singleLine="true"
-            android:textColor="#ff000000"
-            android:textColorHint="#ffcccccc" />
         <ListView
             android:id="@+id/list_view"
             android:choiceMode="singleChoice"
@@ -68,5 +52,24 @@
         </ListView>
 
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/search_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/contact_search_box_edittext_keyword_background"
+        android:drawableLeft="@drawable/magnifying_glass"
+        android:drawablePadding="10.0dip"
+        android:hint="搜索全国城市（中文）"
+        android:imeOptions="actionSearch"
+        android:paddingBottom="14.0dp"
+        android:paddingLeft="15.0dp"
+        android:paddingRight="30.0dp"
+        android:paddingTop="15.0dp"
+        android:singleLine="true"
+        android:textColor="#ff000000"
+        android:textColorHint="#ffcccccc" />
 
 </RelativeLayout>
