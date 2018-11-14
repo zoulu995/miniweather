@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView mCitySelect;
     private TextView cityTv, timeTv, humidityTv, weekTv, pmDataTv, pmQualityTv, temperatureTv, climateTv, windTv, city_name_Tv;
     private ImageView weatherImg, pmImg;
+    private ImageView mShareBtn;
+
 
     private Handler mHandler = new Handler() {
         public void handleMessage(android.os.Message msg) {
@@ -64,6 +66,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         mCitySelect = (ImageView) findViewById(R.id.title_city_manager);
         mCitySelect.setOnClickListener(this);
+
+        mShareBtn = (ImageView)findViewById(R.id.title_share);
+        mShareBtn.setOnClickListener(this);
 
         initView();
     }
@@ -329,6 +334,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent i = new Intent(this, SelectCity.class);
             //startActivity(i);
             startActivityForResult(i,1);
+        }
+
+        if(v.getId() == R.id.title_share){
+            Intent i2 = new Intent(this,Activity1.class);
+            startActivity(i2);
         }
 
         if (v.getId() == R.id.title_update_btn) {
